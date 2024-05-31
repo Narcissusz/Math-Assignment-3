@@ -38,7 +38,6 @@ def fit_regression_model(X, y):
     
     loss_fn = nn.L1Loss() # Use mean squared error loss, like in class
     optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
-
     # previos_loss = float("inf")
     # for epoch in range(1, num_epochs):
     #     loss = train_iteration(X, y, model, loss_fn, optimizer)
@@ -47,7 +46,6 @@ def fit_regression_model(X, y):
     #     previos_loss = loss.item()
     #     # This is a good place to print the loss every 1000 epochs.
     # return model, loss
-
     prev_loss = float("inf")
     for epoch in range(1, num_epochs + 1):
         loss = train_iteration(X, y, model, loss_fn, optimizer)
